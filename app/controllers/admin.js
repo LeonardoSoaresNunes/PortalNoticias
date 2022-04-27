@@ -1,18 +1,13 @@
-var dbConnection = require('../../config/dbConnection');
+module.exports.formulario_inclusao_noticia = function(app , req , res){
+	res.render("admin/form_add_noticia" , {validacao:{} , noticia: {}});
 
 
-module.exports = function(app){
-	app.get('/formulario_inclusao_noticia', function(req,res){
-	//res.render("admin/form_add_noticia" , {validacao:{} , noticia: {}});
-	app.app.controllers.admin.formulario_inclusao_noticia(app , req , res);
-	});
+}
 
-	app.post('/noticias/salvar', function(req,res){
-		app.app.controllers.admin.noticias_salvar(app , req , res);
-	
-		
-		/*
-		var noticias = req.body;
+
+module.exports.noticias_salvar = function(app , req , res){
+
+	var noticias = req.body;
 
 		req.assert('titulo','Titulo é obrigatório').notEmpty();
 		req.assert('resumo', 'Resumo deve ter entre 10 e 100 caracteres').len(10 , 100);
@@ -31,11 +26,6 @@ module.exports = function(app){
 
 		//noticiasModels.salvarNoticias(noticias , function(error , results){
 			//res.redirect('/noticias');
-		//})
-	res.send(noticias);
-*/
-
-	});
+		//});
 
 }
-

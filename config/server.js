@@ -15,7 +15,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 consign ()
 	.include('app/routes')
 	.then('config/dbConnection')
-	.the('app/models')
+	.then('app/models')
+	.then('app/controllers')
 	.then('app');
 	*/
 

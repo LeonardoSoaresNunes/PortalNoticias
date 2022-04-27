@@ -27,7 +27,7 @@ rotaProcessador(app);
 
 
 
-var rotaNoticias = require('./app/routes/noticias')(app);
+var rotaNoticia = require('./app/routes/noticia')(app);
 //rotaNoticias(app); menos codigo na aplicação
 
 
